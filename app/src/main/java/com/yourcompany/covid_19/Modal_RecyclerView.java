@@ -1,5 +1,7 @@
 package com.yourcompany.covid_19;
 
+import java.util.Comparator;
+
 public class Modal_RecyclerView {
     private String Country;
     private String Total_confirmed;
@@ -74,4 +76,11 @@ public class Modal_RecyclerView {
     private String New_death;
     private String New_recovered;
     private String Time;
+
+    public static final Comparator<Modal_RecyclerView> BY_TOTAL_CASE = new Comparator<Modal_RecyclerView>() {
+        @Override
+        public int compare(Modal_RecyclerView o1, Modal_RecyclerView o2) {
+            return o1.getTotal_confirmed().compareTo(o2.getTotal_confirmed());
+        }
+    };
 }

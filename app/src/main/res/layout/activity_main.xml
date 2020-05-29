@@ -18,6 +18,7 @@
         tools:ignore="MissingConstraints">
 
         <LinearLayout
+            android:id="@+id/total_case2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -33,12 +34,14 @@
                 android:layout_height="wrap_content"
                 android:text="..."
                 android:padding="10dp"
-                android:layout_marginLeft="0dp"/>
+                android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/total_death2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -52,12 +55,14 @@
                 android:layout_height="wrap_content"
                 android:text="..."
                 android:padding="10dp"
-                android:layout_marginLeft="0dp"/>
+                android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/total_recovered2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
@@ -71,41 +76,52 @@
                 android:layout_height="wrap_content"
                 android:text="..."
                 android:padding="10dp"
-                android:layout_marginLeft="0dp"/>
+                android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
 
 
 
     </LinearLayout>
-    <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="15dp"
+            android:layout_marginLeft="10dp"
             tools:ignore="MissingConstraints">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sort_low"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sort_up"/>
+
         <TextView
+            android:id="@+id/filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Filter"
-            android:layout_gravity="right"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:background="@drawable/edit_box"/>
+        <TextView
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Filter"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/edit_box"/>
+        <ImageView
+            android:id="@+id/sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/sort_low"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 <!--    <LinearLayout-->
 <!--        android:layout_marginLeft="10dp"-->
 <!--        android:layout_marginRight="10dp"-->
